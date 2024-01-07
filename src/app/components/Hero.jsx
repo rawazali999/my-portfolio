@@ -1,30 +1,23 @@
-"use client";
 import React from "react";
 import Image from "next/image";
 
 export default function Hero() {
-  function handleOpenPdf() {
-    window.open("/cv.pdf", "_blank"); // Replace with the actual path to your PDF file
-  }
-  const pdfUrl = "cv.pdf"; // Replace with the actual path to your PDF file
-
   return (
-    <div className="mx-auto max-w-screen-lg px-3 py-6 mt-10">
-      <div className=" text-white flex flex-col items-center md:flex-row md:justify-between md:gap-x-24">
-        <div>
-          <h1 className="text-3xl font-bold">
+    <section id="home" className="mx-auto  max-w-screen-lg px-3 pt-20">
+      <div className=" mx-2 flex flex-col items-center text-white md:flex-row md:justify-evenly ">
+        <div className="space-y-6">
+          <h1 className="text-3xl font-bold ">
             Hi there, I&apos;m{" "}
             <span className="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">
               Rawaz Ali
             </span>{" "}
             👋
-          </h1>
-          <p className="mt-6 text-xl leading-9">
-            I&apos;m a front-end web developer and software engineer graduated
-            from Salahaddin University - Erbil.
-          </p>
-          <div className="mt-3 flex z-40 relative gap-2">
-            <a href="" className="p-3 bg-white rounded-full ">
+          </h1>{" "}
+          <h2 className="text-xl text-gray-300">
+            Front End Developer - Software Engineer
+          </h2>
+          <div className=" mt-3  flex gap-2">
+            <a href="" className="rounded-full bg-white p-3 ">
               {/* Github */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -37,7 +30,7 @@ export default function Hero() {
               </svg>
             </a>
             {/* linkedin */}
-            <a href="" className="p-3 bg-white rounded-full ">
+            <a href="" className="rounded-full bg-white p-3 ">
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-7"
@@ -48,7 +41,7 @@ export default function Hero() {
                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
               </svg>
             </a>
-            <a href="" className=" p-3 bg-white rounded-full ">
+            <a href="" className=" rounded-full bg-white p-3 ">
               {/* facebook */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -61,9 +54,10 @@ export default function Hero() {
               </svg>
             </a>
             {/* cv download button */}
-            <button
-              onClick={handleOpenPdf}
-              className="bg-gradient-to-r font-bold text-xl flex justify-center items-center from-sky-500 to-cyan-400 rounded-full px-4 py-2  transition-all"
+            <a
+              href="https://flowcv.com/resume/9ud077mfd8"
+              target="_blank"
+              className="flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-4 py-2 text-xl font-bold  transition-all"
             >
               CV
               <Image
@@ -72,7 +66,7 @@ export default function Hero() {
                 width={30}
                 alt="download icon"
               />
-            </button>
+            </a>
           </div>
         </div>
         <div className="shrink-0">
@@ -86,6 +80,6 @@ export default function Hero() {
           />
         </div>
       </div>
-    </div>
+    </section>
   );
 }
