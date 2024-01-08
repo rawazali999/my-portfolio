@@ -22,6 +22,10 @@ import {
   SiMui,
 } from "react-icons/si";
 import { TbBrandNextjs } from "react-icons/tb";
+//import skills icon from react-icons 
+
+
+
 
 export default function Skills() {
   const skills = [
@@ -34,20 +38,23 @@ export default function Skills() {
     { name: "Redux.js", icon: <SiRedux />, level: 50 },
     { name: "Node.js", icon: <FaNodeJs />, level: 75 },
     { name: "MySql", icon: <SiMysql />, level: 80 },
-    { name: "Git", icon: <FaGit />, level: 75 },
-    { name: "GitHub", icon: <FaGithub />, level: 75 },
+    { name: "Git", icon: <FaGit />, level: 50 },
+    { name: "GitHub", icon: <FaGithub />, level: 50 },
     { name: "TailwindCSS", icon: <SiTailwindcss />, level: 80 },
     { name: "Bootstrap", icon: <SiBootstrap />, level: 50 },
     { name: "MaterialUi", icon: <SiMui />, level: 60 },
     { name: "Php", icon: <FaPhp />, level: 40 },
     { name: "Java", icon: <FaJava />, level: 50 },
-    { name: "Laravel", icon: <FaLaravel />, level: 40 },
-    { name: "Mongodb", icon: <SiMongodb />, level: 50 },
+    { name: "Laravel", icon: <FaLaravel />, level: 30 },
+    { name: "MongoDB", icon: <SiMongodb />, level: 50 },
   ];
 
   return (
-    <section className="mb-10 mt-20  pt-20">
-      <h2 id="skills" className="mb-6 text-center text-4xl tracking-wider">
+    <section className="">
+      <h2
+        id="skills"
+        className="my-6 pt-20 text-center text-4xl tracking-wider"
+      >
         Skills
       </h2>
       <div className="grid grid-cols-1 gap-4 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
@@ -57,23 +64,15 @@ export default function Skills() {
               <div className="mr-2 text-2xl">{icon}</div>
               <h3 className="text-lg font-semibold">{name}</h3>
             </div>
-            <div className="relative pt-1">
-              <div className="mb-2 flex items-center justify-between">
-                <div>
-                  <span className="inline-block rounded-full bg-blue-200 px-2 py-1 text-xs font-semibold uppercase text-blue-800">
-                    Skill Level
-                  </span>
-                </div>
-                <div className="text-right">
-                  <span className="inline-block text-xs font-semibold text-blue-500">
-                    {level}%
-                  </span>
-                </div>
-              </div>
-              <div className="mb-4 flex h-2 overflow-hidden">
+            <div className=" pt-1">
+              <span className="mb-2 inline-block text-right text-lg font-semibold text-blue-300">
+                {level}%
+              </span>
+
+              <div className="mb-2 flex h-2 overflow-hidden">
                 <div
                   style={{ width: `${level}%` }}
-                  className="flex flex-col justify-center whitespace-nowrap bg-blue-500 text-white shadow-md"
+                  className="flex flex-col justify-center whitespace-nowrap rounded-md bg-blue-500 text-white shadow-md"
                 ></div>
               </div>
             </div>

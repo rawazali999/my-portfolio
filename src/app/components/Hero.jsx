@@ -5,8 +5,8 @@ export default function Hero() {
   return (
     <section id="home" className="mx-auto  max-w-screen-lg px-3 pt-20">
       <div className=" mx-2 flex flex-col items-center text-white md:flex-row md:justify-evenly ">
-        <div className="space-y-6">
-          <h1 className="text-3xl font-bold ">
+        <div className="space-y-6 text-center">
+          <h1 className="text-3xl font-bold  ">
             Hi there, I&apos;m{" "}
             <span className="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">
               Rawaz Ali

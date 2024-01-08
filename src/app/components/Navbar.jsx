@@ -29,7 +29,7 @@ const Navbar = () => {
         scrolling ? "shadow-md" : ""
       }`}
     >
-      <div className="container mx-2 flex items-center justify-between ">
+      <div className="container mx-2 flex items-center justify-between md:justify-evenly ">
         <Link href="/" className="text-2xl font-bold tracking-wider">
           Rawaz Ali
         </Link>
@@ -73,7 +73,7 @@ const Navbar = () => {
 const NavLink = ({ href, children }) => (
   <Link
     href={href}
-    className="px-4 py-2 text-gray-100 transition-all hover:text-gray-300"
+    className="px-4 py-2 text-gray-100 transition-all hover:text-gray-300 hover:underline"
   >
     {children}
   </Link>
