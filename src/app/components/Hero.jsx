@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section id="home" className="mx-auto  max-w-screen-lg px-3 pt-20">
       <div className=" mx-2 flex flex-col items-center text-white md:flex-row md:justify-evenly ">
-        <div className="space-y-6 text-center">
+        <div className="flex flex-col justify-center space-y-6 text-center">
           <h1 className="text-3xl font-bold  ">
             Hi there, I&apos;m{" "}
             <span className="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">
@@ -16,7 +16,7 @@ export default function Hero() {
           <h2 className="text-xl text-gray-300">
             Front End Developer - Software Engineer
           </h2>
-          <div className=" mt-3  flex gap-2">
+          <div className=" mx-auto mt-3 flex gap-2">
             <a href="" className="rounded-full bg-white p-3 ">
               {/* Github */}
               <svg

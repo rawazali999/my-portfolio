@@ -2,7 +2,7 @@ import React from "react";
 import Image from "next/image";
 
 const Card = ({ project }) => {
-  const { name, description, image, technologies, github, host } = project;
+  const { name, description, image, technologies, github, link } = project;
 
   return (
     <div className="m-2 flex   max-w-xs flex-col justify-between overflow-hidden rounded-xl border-2 hover:shadow-lg">
@@ -36,7 +36,7 @@ const Card = ({ project }) => {
           GitHub
         </a>
         <a
-          href={host}
+          href={link}
           target="_blank"
           className="cursor-pointer text-blue-300 underline  hover:text-white"
         >
