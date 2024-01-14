@@ -22,10 +22,10 @@ export default function About() {
           <h2 className="text-center text-2xl md:text-start md:text-3xl">
             Rawaz Ali{" "}
           </h2>
-          <h3 className="text-center text-lg text-gray-300 md:text-start md:text-xl">
+          <h3 className="text-center text-lg text-gray-500 md:text-start md:text-xl">
             Front End Developer - Software Engineer
           </h3>
-          <p className="text-md mt-6  p-2 leading-9">
+          <p className="text-md mt-6  p-3 text-justify leading-9">
             I&apos;m a front-end web developer and software engineer graduated
             from Salahaddin University - Erbil. I have serious passion for front
             end development, creating intuitive, dynamic user experiences and

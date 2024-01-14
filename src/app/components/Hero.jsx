@@ -4,20 +4,25 @@ import Image from "next/image";
 export default function Hero() {
   return (
     <section id="home" className="mx-auto  max-w-screen-lg px-3 pt-20">
-      <div className=" mx-2 flex flex-col items-center text-white md:flex-row md:justify-evenly ">
+      <div className=" mx-2 flex flex-col items-center  md:flex-row md:justify-evenly ">
         <div className="flex flex-col justify-center space-y-6 text-center">
-          <h1 className="text-3xl font-bold  ">
-            Hi there, I&apos;m{" "}
+          <h1 className="text-3xl font-bold">
+            Hi there,
+            <br className="block sm:hidden" /> I&apos;m{" "}
             <span className="bg-gradient-to-br from-sky-500 to-cyan-400 bg-clip-text text-transparent">
               Rawaz Ali
             </span>{" "}
             👋
           </h1>{" "}
-          <h2 className="text-xl text-gray-300">
+          <h2 className="text-xl text-gray-500">
             Front End Developer - Software Engineer
           </h2>
-          <div className=" mx-auto mt-3 flex gap-2">
-            <a href="" className="rounded-full bg-white p-3 ">
+          <div className="mx-auto mt-3 flex gap-2">
+            <a
+              href="https://github.com/rawazali999"
+              target="_blank"
+              className="rounded-full bg-white p-3 transition-all hover:bg-gray-200 "
+            >
               {/* Github */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -30,7 +35,11 @@ export default function Hero() {
               </svg>
             </a>
             {/* linkedin */}
-            <a href="" className="rounded-full bg-white p-3 ">
+            <a
+              href="https://www.linkedin.com/in/rawaz-ali999/"
+              target="_blank"
+              className="rounded-full bg-white p-3 transition-all hover:bg-gray-200"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 className="h-7 w-7"
@@ -41,7 +50,11 @@ export default function Hero() {
                 <path d="M4.98 3.5c0 1.381-1.11 2.5-2.48 2.5s-2.48-1.119-2.48-2.5c0-1.38 1.11-2.5 2.48-2.5s2.48 1.12 2.48 2.5zm.02 4.5h-5v16h5v-16zm7.982 0h-4.968v16h4.969v-8.399c0-4.67 6.029-5.052 6.029 0v8.399h4.988v-10.131c0-7.88-8.922-7.593-11.018-3.714v-2.155z" />
               </svg>
             </a>
-            <a href="" className=" rounded-full bg-white p-3 ">
+            <a
+              href="https://www.facebook.com/rawazali999"
+              target="_blank"
+              className=" rounded-full bg-white p-3 transition-all hover:bg-gray-200"
+            >
               {/* facebook */}
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -57,7 +70,7 @@ export default function Hero() {
             <a
               href="https://flowcv.com/resume/9ud077mfd8"
               target="_blank"
-              className="flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-4 py-2 text-xl font-bold  transition-all"
+              className="flex items-center justify-center rounded-full bg-gradient-to-r from-sky-500 to-cyan-400 px-4 py-2 text-xl font-bold text-white  transition-all"
             >
               CV
               <Image

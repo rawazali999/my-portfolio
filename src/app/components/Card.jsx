@@ -5,7 +5,7 @@ const Card = ({ project }) => {
   const { name, description, image, technologies, github, link } = project;
 
   return (
-    <div className="m-2 flex   max-w-xs flex-col justify-between overflow-hidden rounded-xl border-2 hover:shadow-lg">
+    <div className="m-2 flex  max-w-xs flex-col justify-between overflow-hidden rounded-xl shadow-md dark:border-2">
       <Image
         width={250}
         height={100}
@@ -15,7 +15,7 @@ const Card = ({ project }) => {
       />
       <div className="px-6 py-4">
         <div className="mb-2 text-xl font-bold">{name}</div>
-        <p className="text-base text-gray-300">{description}</p>
+        <p className="text-base text-gray-400">{description}</p>
       </div>
       <div className="space-x-1 space-y-1 p-4 ">
         {technologies.map((tech, index) => (
@@ -31,14 +31,14 @@ const Card = ({ project }) => {
         <a
           href={github}
           target="_blank"
-          className="mr-4 cursor-pointer text-blue-300 underline  hover:text-white"
+          className="mr-4 cursor-pointer text-blue-300 underline  hover:text-blue-500"
         >
           GitHub
         </a>
         <a
           href={link}
           target="_blank"
-          className="cursor-pointer text-blue-300 underline  hover:text-white"
+          className="cursor-pointer text-blue-300 underline hover:text-blue-500"
         >
           see live
         </a>

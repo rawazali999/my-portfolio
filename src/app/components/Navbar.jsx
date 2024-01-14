@@ -2,6 +2,7 @@
 // components/Navbar.js
 import { useState, useEffect } from "react";
 import Link from "next/link";
+import ThemeToggle from "./Theme/ThemeToggle";
 
 const Navbar = () => {
   const [scrolling, setScrolling] = useState(false);
@@ -25,11 +26,11 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 w-full bg-main p-4 text-white transition-all ${
+      className={`fixed top-0 w-full bg-slate-50 p-4 transition-all dark:bg-main ${
         scrolling ? "shadow-md" : ""
       }`}
     >
-      <div className="container mx-2 flex items-center justify-between md:justify-evenly ">
+      <div className=" mx-2 flex items-center justify-between  md:justify-evenly">
         <Link href="/" className="text-2xl font-bold tracking-wider">
           Rawaz Ali
         </Link>
@@ -40,10 +41,11 @@ const Navbar = () => {
           <NavLink href="/#projects">Projects</NavLink>
           <NavLink href="/#contact">Contact</NavLink>
         </div>
+        <ThemeToggle className={"hidden md:block"} />
         <div
           className={`${
             menuOpen ? "flex" : "hidden"
-          } fixed right-2 top-14 flex-col space-y-4  rounded-md bg-main text-center shadow-lg `}
+          } fixed right-2 top-14 flex-col space-y-4 rounded-md  bg-white text-center  shadow-lg dark:bg-main `}
         >
           <NavLink href="/#home">Home</NavLink>
           <NavLink href="/#about">About</NavLink>
@@ -52,19 +54,22 @@ const Navbar = () => {
           <NavLink href="/#contact">Contact</NavLink>
         </div>
 
-        <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className="block text-3xl focus:outline-none md:hidden"
-        >
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            className="h-8 w-8 text-white"
-            fill="currentColor"
-            viewBox="0 0 24 24"
+        <div className="flex p-1 md:hidden ">
+          <ThemeToggle />
+          <button
+            onClick={() => setMenuOpen(!menuOpen)}
+            className="text-3xl focus:outline-none"
           >
-            <path d="M4 6h16v2h-16v-2zm0 5h16v2h-16v-2zm0 5h16v2h-16v-2z" />
-          </svg>
-        </button>
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              className="h-8 w-8 "
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path d="M4 6h16v2h-16v-2zm0 5h16v2h-16v-2zm0 5h16v2h-16v-2z" />
+            </svg>
+          </button>
+        </div>
       </div>
     </nav>
   );
@@ -73,7 +78,7 @@ const Navbar = () => {
 const NavLink = ({ href, children }) => (
   <Link
     href={href}
-    className="px-4 py-2 text-gray-100 transition-all hover:text-gray-300 hover:underline"
+    className="px-4 py-2  transition-all hover:text-gray-300 hover:underline"
   >
     {children}
   </Link>
